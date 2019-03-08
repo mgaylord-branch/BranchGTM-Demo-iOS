@@ -2,13 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict>
-		<key>GiphySharer.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
-		</dict>
-	</dict>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:agjs.app.link</string>
+		<string>applinks:agjs-alternate.app.link</string>
+	</array>
 </dict>
 </plist>
