@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4C03075D223229F50096A1B7 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C03075C223229F50096A1B7 /* ImageViewController.swift */; };
+		4C27F2C92390FF540087BB9D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C27F2C82390FF540087BB9D /* WebViewController.swift */; };
 		4C4613E42230C222007A88D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4613E32230C222007A88D3 /* AppDelegate.swift */; };
 		4C4613E62230C222007A88D3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4613E52230C222007A88D3 /* MainViewController.swift */; };
 		4C4613EB2230C224007A88D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4613EA2230C224007A88D3 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		0B5075C41687991514578D55 /* Pods_GiphySharer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiphySharer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C03075C223229F50096A1B7 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		4C27F2C82390FF540087BB9D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4C4613E02230C222007A88D3 /* GiphySharer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiphySharer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4613E32230C222007A88D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4613E52230C222007A88D3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				4C4613EC2230C224007A88D3 /* LaunchScreen.storyboard */,
 				4C4613E52230C222007A88D3 /* MainViewController.swift */,
 				4C03075C223229F50096A1B7 /* ImageViewController.swift */,
+				4C27F2C82390FF540087BB9D /* WebViewController.swift */,
 			);
 			path = GiphySharer;
 			sourceTree = "<group>";
@@ -216,24 +219,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GiphySharer/Pods-GiphySharer-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AwaitKit/AwaitKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Branch/Branch.framework",
-				"${BUILT_PRODUCTS_DIR}/GiphyCoreSDK/GiphyCoreSDK.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-GiphySharer/Pods-GiphySharer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AwaitKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Branch.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GiphyCoreSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-GiphySharer/Pods-GiphySharer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -250,6 +240,7 @@
 				4C4613E62230C222007A88D3 /* MainViewController.swift in Sources */,
 				4C4613F62230C8A4007A88D3 /* GiphyService.swift in Sources */,
 				4C03075D223229F50096A1B7 /* ImageViewController.swift in Sources */,
+				4C27F2C92390FF540087BB9D /* WebViewController.swift in Sources */,
 				4C4613E42230C222007A88D3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

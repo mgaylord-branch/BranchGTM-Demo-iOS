@@ -6,6 +6,8 @@
 	<array>
 		<string>applinks:agjs.app.link</string>
 		<string>applinks:agjs-alternate.app.link</string>
+		<string>applinks:agjs.test-app.link</string>
+		<string>applinks:agjs-alternate.test-app.link</string>
 	</array>
 </dict>
 </plist>

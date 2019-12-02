@@ -8,6 +8,7 @@
 
 import UIKit
 import Branch
+import AdSupport
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,17 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         #if DEBUG
-            Branch.setUseTestBranchKey(true)
-            debugPrint("*********** Using Branch Test Key *********** ")
+//            Branch.setUseTestBranchKey(true)
+//            debugPrint("*********** Using Branch Test Key *********** ")
         #endif
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let viewController = MainViewController()
         let navController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = navController
-        
+//        Branch.getInstance()?.setDebug()
+        Branch.getInstance()?.setIdentity("michael-gaylord")
         // Initialize branch
-        Branch.getInstance().initSession(launchOptions: launchOptions) { (params, error) in
+        Branch.getInstance()?.initSession(launchOptions: launchOptions, andRegisterDeepLinkHandler: { (params, error) in
             // Branch.getInstance()?.validateSDKIntegration()
             if let error = error {
                 debugPrint("Error initializing BranchSDK: \(error)")
@@ -40,8 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return
             }
             navController.pushViewController(ImageViewController(giphyID: imageID), animated: true)
-        }
-        // Branch.getInstance().setDebug()
+        })
+        let first = Branch.getInstance()?.getFirstReferringParams()
+        
+        debugPrint("First: \(String(describing: first))")
         
         window?.makeKeyAndVisible()
         return true
@@ -50,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication,
                      open url: URL,
                      options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        Branch.getInstance().application(app, open: url, options: options)
+        Branch.getInstance()?.application(app, open: url, options: options)
         return true
     }
     
@@ -58,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      continue userActivity: NSUserActivity,
                      restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         // handler for Universal Links
-        Branch.getInstance().continue(userActivity)
+        Branch.getInstance()?.continue(userActivity)
         return true
     }
     
@@ -66,8 +70,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didReceiveRemoteNotification userInfo: [AnyHashable : Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         // handler for Push Notifications
-        Branch.getInstance().handlePushNotification(userInfo)
+        Branch.getInstance()?.handlePushNotification(userInfo)
     }
+    
+    
 
 }
 
